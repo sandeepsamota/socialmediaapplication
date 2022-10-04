@@ -9,14 +9,10 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
 import Post from "../Modal/Post";
-// import EditPostHandle from "../EditPost/EditPostHandle";
 import AccountCircleIcon from "../../../node_modules/@material-ui/icons/AccountCircle";
 import VideoCallOutlinedIcon from "../../../node_modules/@material-ui/icons/VideoCallOutlined";
 import CollectionsOutlinedIcon from "../../../node_modules/@material-ui/icons/CollectionsOutlined";
 import MoodOutlinedIcon from "../../../node_modules/@material-ui/icons/MoodOutlined";
-// import DeleteOutlineOutlinedIcon from "../../../node_modules/@material-ui/icons/DeleteOutlineOutlined";
-// import EditOutlinedIcon from "../../../node_modules/@material-ui/icons/EditOutlined";
-// import FavoriteBorderOutlinedIcon from "../../../node_modules/@material-ui/icons/FavoriteBorderOutlined";
 import FavoriteIcon from "../../../node_modules/@material-ui/icons/Favorite";
 import ChatBubbleOutlineOutlinedIcon from "../../../node_modules/@material-ui/icons/ChatBubbleOutlineOutlined";
 import ShareOutlinedIcon from "../../../node_modules/@material-ui/icons/ShareOutlined";
