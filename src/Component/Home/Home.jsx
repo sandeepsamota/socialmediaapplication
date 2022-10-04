@@ -9,6 +9,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
 import Post from "../Modal/Post";
+// import EditPostHandle from "../EditPost/EditPostHandle";
 import AccountCircleIcon from "../../../node_modules/@material-ui/icons/AccountCircle";
 import VideoCallOutlinedIcon from "../../../node_modules/@material-ui/icons/VideoCallOutlined";
 import CollectionsOutlinedIcon from "../../../node_modules/@material-ui/icons/CollectionsOutlined";
@@ -19,6 +20,7 @@ import MoodOutlinedIcon from "../../../node_modules/@material-ui/icons/MoodOutli
 import FavoriteIcon from "../../../node_modules/@material-ui/icons/Favorite";
 import ChatBubbleOutlineOutlinedIcon from "../../../node_modules/@material-ui/icons/ChatBubbleOutlineOutlined";
 import ShareOutlinedIcon from "../../../node_modules/@material-ui/icons/ShareOutlined";
+
 import AddOutlinedIcon from "../../../node_modules/@material-ui/icons/AddOutlined";
 import MoreVertIcon from "../../../node_modules/@material-ui/icons/MoreVert";
 // import { useNavigate } from "react-router-dom";
@@ -90,13 +92,13 @@ function Home() {
         if (res.success === true) {
           toast.success(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
           // setTimeout(() => {}, 3000);
         } else {
           toast.error(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         }
       });
@@ -124,12 +126,12 @@ function Home() {
         if (res.success === true) {
           toast.success(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         } else {
           toast.error(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         }
       });
@@ -155,18 +157,18 @@ function Home() {
         if (res.success === true) {
           toast.success(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         } else {
           toast.error(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         }
       });
     setTimeout(() => {
       setComment("");
-    }, 4500);
+    }, 2000);
   };
 
   const likeeventhandler = (id) => {
@@ -191,14 +193,14 @@ function Home() {
             likeres.message,
             {
               position: toast.POSITION.TOP_CENTER,
-              autoClose: 2000,
+              autoClose: 1000,
             },
             document.getElementsByTagName(<FavoriteIcon />)
           );
         } else {
           toast.error(likeres.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         }
       });
@@ -223,12 +225,12 @@ function Home() {
         if (res.success === true) {
           toast.success(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         } else {
           toast.error(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         }
       });
@@ -252,12 +254,12 @@ function Home() {
         if (res.success === true) {
           toast.success(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         } else {
           toast.error(res.message, {
             position: toast.POSITION.TOP_CENTER,
-            autoClose: 2000,
+            autoClose: 1000,
           });
         }
       });
@@ -313,10 +315,6 @@ function Home() {
 
             {isOpen && <Post setIsOpen={setIsOpen} />}
           </div>
-          {/* <div className="createpostheading">
-            <button onClick={GetAllPosts}>Reload posts</button>
-            <ToastContainer />
-          </div> */}
 
           {response?.map((value, index) => {
             return (
@@ -356,18 +354,27 @@ function Home() {
                         <MoreVertIcon
                           style={{ color: "#808080" }}
                         ></MoreVertIcon>
-                        {/* <span className="moreicontip">Add To Your Post</span> */}
+                        <div className="moreiconbtntip">
+                          <span
+                            onClick={() =>
+                              deleteHandler(value?.id, value?.userId)
+                            }
+                          >
+                            Delete
+                            <ToastContainer />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <hr></hr>
+                  <hr className="hrbeforeaccountdeatails"></hr>
 
                   <div className="postcontent" key={index}>
                     <div className="posttextcontent">{value?.text}</div>
                   </div>
 
-                  <hr></hr>
+                  <hr className="hrbeforelikeshare"></hr>
 
                   <div className="postmodalmedia2">
                     <div
@@ -450,19 +457,6 @@ function Home() {
                   </div>
 
                   <br />
-
-                  <div className="postdivbtn">
-                    <button
-                      className="deletepostbtn"
-                      onClick={() => deleteHandler(value?.id, value?.userId)}
-                    >
-                      Delete Post
-                    </button>
-
-                    <ToastContainer />
-                  </div>
-
-                  <hr></hr>
                 </div>
               </>
             );
