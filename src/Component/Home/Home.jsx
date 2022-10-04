@@ -19,13 +19,10 @@ import ShareOutlinedIcon from "../../../node_modules/@material-ui/icons/ShareOut
 
 import AddOutlinedIcon from "../../../node_modules/@material-ui/icons/AddOutlined";
 import MoreVertIcon from "../../../node_modules/@material-ui/icons/MoreVert";
-// import { useNavigate } from "react-router-dom";
 import Navbar1 from "../Navbar/Navbar1";
 
 function Home() {
   const name = JSON.stringify(localStorage.getItem("name")).replaceAll('"', "");
-
-  // let navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -90,7 +87,6 @@ function Home() {
             position: toast.POSITION.TOP_CENTER,
             autoClose: 1000,
           });
-          // setTimeout(() => {}, 3000);
         } else {
           toast.error(res.message, {
             position: toast.POSITION.TOP_CENTER,
@@ -116,7 +112,6 @@ function Home() {
       .then((res) => {
         const updatedpost = response.map((data) => data.id !== id);
         console.log(res);
-        // setResponse(res?.data?.[0]);
         setResponse(updatedpost);
 
         if (res.success === true) {
