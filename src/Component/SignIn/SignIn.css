@@ -1,0 +1,84 @@
+.divider:after,
+.divider:before {
+    content: "";
+
+    flex: 1;
+    height: 2px;
+    background: #eee;
+}
+
+button {
+    background-color: #1266f1;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 7px;
+    border: 2px solid #1266f1;
+}
+
+button:hover {
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 7px;
+    background-color: #fff;
+    color: #1266f1;
+    transition: 0.5s;
+    border: 2px solid #1266f1;
+}
+
+.forgotpassword {
+    color: #1266f1;
+}
+
+.signinpassword {
+    position: relative;
+    top: -10px;
+}
+
+.signinshowpassword {
+    position: relative;
+    top: -20px;
+}
+
+.signinbtn {
+    position: relative;
+    top: -45px;
+    border: none;
+    left: 10px;
+}
+
+
+
+
+
+
+
+/* button:hover {
+    background-color: #1266f1;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 7px;
+    border: #1266f1;
+
+} */
+
+.h-custom {
+    display: flex;
+    position: relative;
+    margin: 10%;
+    height: 80%;
+    width: 80%;
+    top: -10px;
+}
+
+
+@media (max-width: 300px) {
+    .h-custom {
+        position: relative;
+        margin: 10%;
+        height: 80%;
+        width: 80%;
+        top: 70px;
+    }
+}

@@ -1,0 +1,109 @@
+.settings {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 10px 50px -10px rgba(24, 90, 219, 0.6);
+    border-radius: 10px;
+
+}
+
+.deleteuser {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.publicorprivate {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.private {
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+
+}
+
+.public {
+    position: relative;
+    right: 20px;
+    bottom: 10px;
+}
+
+.updateprofilename {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+
+.firstname {
+    width: 93%;
+}
+
+.lastname {
+    width: 100%;
+}
+
+.updateusername {
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.updatedob {
+    position: relative;
+    top: -20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.updateprofilebtn {
+    position: relative;
+    top: -20px;
+    display: flex;
+    justify-content: center;
+}
+
+.updateprofilebtn1 {
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.updateprofilebtn1:hover {
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.publicorprivate {
+    position: relative;
+    top: 9px;
+}
+
+h4 {
+    text-align: center;
+    color: #1266f1;
+}
+
+h5 {
+    text-align: center;
+    color: #1266f1;
+    color: crimson;
+}
+
+
+@media(max-width:800px) {
+    .settings {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 10px 50px -10px rgba(24, 90, 219, 0.6);
+        border-radius: 10px;
+
+    }
+}

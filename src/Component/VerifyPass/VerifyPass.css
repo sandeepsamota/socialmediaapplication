@@ -1,0 +1,92 @@
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #eee;
+}
+
+.verifybtn {
+    background-color: #1266f1;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 7px;
+    border: 2px solid #1266f1;
+}
+
+.verifybtn:hover {
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 7px;
+    background-color: #fff;
+    color: #1266f1;
+    transition: 0.5s;
+    border: 2px solid #1266f1;
+}
+
+.verifydivider {
+    justify-content: center;
+}
+
+.verifypassword {
+    position: relative;
+    top: -10px;
+}
+
+.verifyshowpassword {
+    position: relative;
+    top: -20px;
+}
+
+.verifybtn1 {
+    position: relative;
+    top: -10px;
+    border: none;
+}
+
+
+
+
+/* button:hover {
+    background-color: #1266f1;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 7px;
+    border: #1266f1;
+
+} */
+
+.h-custom {
+    position: relative;
+    margin: 10%;
+    height: 80%;
+    width: 80%;
+    top: -10px;
+}
+
+.img-fluid1 {
+    height: 80%;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+
+@media (max-width: 300px) {
+    .h-custom {
+        position: relative;
+        margin: 10%;
+        height: 80%;
+        width: 80%;
+        top: 70px;
+    }
+
+    .img-fluid1 {
+        height: 80%;
+        width: 80%;
+        margin-top: 10%;
+        margin-left: 15%;
+    }
+}

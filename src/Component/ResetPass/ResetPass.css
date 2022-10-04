@@ -1,0 +1,25 @@
+.resetpassworddiv {
+    padding: 20px;
+}
+
+.resetbtn1 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.resetbtn1:hover {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.resetbtnclass {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media(max-width:800px) {
+    .resetpassworddiv {
+        padding: 20px;
+    }
+}

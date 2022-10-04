@@ -1,0 +1,227 @@
+.postmodaldivbackground {
+    background-color: #eeeeee;
+    position: relative;
+    top: -250px;
+    left: -485px;
+    height: 750px;
+    width: 300%;
+}
+
+.centerdmodaldiv {
+    background-color: white;
+    position: relative;
+
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px -10px rgba(100, 100, 102, 0.6);
+}
+
+.centerdmodaldiv:hover {
+    background-color: white;
+    position: relative;
+    left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px -10px rgba(100, 100, 102, 0.6);
+}
+
+.tagline {
+    font-family: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.postmodalusericon {
+    position: relative;
+    top: 5px;
+    font-size: xx-large;
+    margin-left: 8px;
+}
+
+.anchor {
+    font-family: inherit;
+    position: relative;
+    top: -4px;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.friendsbtn {
+    position: relative;
+    margin-left: 5px;
+}
+
+.friendsbtndiv {
+    display: flex;
+    position: relative;
+    top: -10px;
+    left: 39px;
+    background-color: #e1dede;
+    width: 100px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.friendsiconmodal {
+    margin-left: 3px;
+    position: relative;
+    top: 3px;
+}
+
+.postinputmodal {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 90%;
+}
+
+
+
+.postinputmodal:hover {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+    height: 100px;
+    width: 90%;
+}
+
+.postinputmodal1 {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+    outline: none;
+    height: 38px;
+    width: 43%;
+}
+
+.postinputmodal1:hover {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+    height: 35px;
+    width: 43%;
+}
+
+.imagemodal {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.postmodalmedia1 {
+    border: 1px solid #808080;
+    border-radius: 10px;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.postmodalmedia1icon {
+    margin-right: 10px;
+}
+
+.postmodalmediaicon1 {
+    margin-left: 11px;
+    cursor: pointer;
+}
+
+.postmodalbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around 4px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.postbtn {
+    width: 100%;
+    margin-left: 5px;
+    border: 2px solid #1266f1;
+}
+
+.postbtn:hover {
+    width: 100%;
+    margin-right: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: #44bf0f;
+    font-weight: 500;
+}
+
+.cancelbtn {
+    width: 100%;
+    margin-right: 5px;
+    background-color: white;
+    color: #1266f1;
+    border: 2px solid #1266f1;
+}
+
+.cancelbtn:hover {
+    width: 100%;
+    margin-right: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: crimson;
+    font-weight: 500;
+}
+
+@media(max-width:800px) {
+    .postmodaldivbackground {
+        background-color: #eeeeee;
+        position: relative;
+        top: -230px;
+        left: 0px;
+        right: 0px;
+        height: 800px;
+        width: 100%;
+    }
+
+    .centerdmodaldiv {
+        background-color: white;
+        position: relative;
+
+        top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        height: 380px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 50px -10px rgba(100, 100, 102, 0.6);
+    }
+
+    .centerdmodaldiv:hover {
+        background-color: white;
+        position: relative;
+        left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        height: 380px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 50px -10px rgba(100, 100, 102, 0.6);
+    }
+
+    .postmodalmediaicon1 {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,119 @@
+.divider:after,
+.divider:before {
+    /* display: flex; */
+    content: "";
+    flex: 1;
+    height: fit-content;
+    background: #eee;
+}
+
+
+
+button {
+    background-color: #1266f1;
+    color: white;
+    font-weight: 600;
+    /* padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px; */
+    padding: 10px;
+    border-radius: 7px;
+    border: #1266f1;
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    color: #1266f1;
+}
+
+
+
+
+
+.h-custom {
+    display: flex;
+    position: relative;
+    margin: 10%;
+    height: 80%;
+    width: 80%;
+    top: -10px;
+}
+
+.signupdivider {
+    position: relative;
+    top: -45px;
+    justify-content: center;
+}
+
+.name {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: -65px;
+}
+
+.firstname {
+    width: 95%;
+}
+
+.lastname {
+    width: 100%;
+}
+
+.username {
+    position: relative;
+    top: -90px;
+}
+
+.email {
+    position: relative;
+    top: -115px;
+}
+
+.password {
+    position: relative;
+    top: -140px;
+}
+
+.showpassword {
+    position: relative;
+    top: -160px;
+}
+
+.dob {
+    position: relative;
+    top: -180px;
+}
+
+.btn {
+    position: relative;
+    top: -210px;
+    border: none;
+    left: 10px;
+}
+
+
+
+
+
+
+/* @media (max-width: 300px) {
+    .h-custom {
+        position: relative;
+        margin: 10%;
+        height: 80%;
+        width: 80%;
+        top: 70px;
+    }
+
+    .signupcoloumn1 {
+        width: 30%;
+
+    }
+
+    .signupcoloumn2 {
+        width: 70%;
+    }
+} */

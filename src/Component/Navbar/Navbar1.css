@@ -1,0 +1,346 @@
+/*  */
+.navbardisplay {
+    display: flex;
+}
+
+.navbar1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    left: 10px;
+}
+
+.navbar2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 10px;
+}
+
+.maninnavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown {
+    position: relative;
+    right: 40px;
+}
+
+.d-flex {
+
+    display: flex;
+}
+
+.d-flex1 {
+    display: flex;
+}
+
+.fluidcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+}
+
+.navbaritems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbarimage {
+    display: flex;
+    position: relative;
+    right: 15px;
+}
+
+.navbarbtn {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -20px;
+}
+
+
+.image {
+    height: 35px;
+    width: 180px;
+}
+
+.btncomponent {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.homebtn {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    position: relative;
+    left: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #808080;
+    font-weight: 600;
+}
+
+.homebtn:hover {
+    font-weight: 600;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 7px;
+    transition: 0.5s;
+    border: none;
+}
+
+.homebtn:active {
+    color: #1266f1;
+}
+
+.profilebtn {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    position: relative;
+    left: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #808080;
+    font-weight: 600;
+}
+
+.profilebtn:hover {
+    font-weight: 600;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 7px;
+    transition: 0.5s;
+    border: none;
+}
+
+.settingsbtn {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    position: relative;
+    left: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #808080;
+    font-weight: 600;
+}
+
+.settingsbtn:hover {
+    font-weight: 600;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 7px;
+    transition: 0.5s;
+    border: none;
+}
+
+.logoutbtn {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    background-color: crimson;
+    font-weight: 600;
+}
+
+.logoutbtn:hover {
+    font-weight: 600;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    background-color: crimson;
+    transition: 0.5s;
+    border: 2px solid crimson;
+}
+
+
+.span:hover {
+    text-decoration: dotted;
+}
+
+.span {
+    cursor: pointer;
+}
+
+.logoutbtncomponent {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .fluidcontainer {
+    position: relative;
+    right: -50px;
+} */
+
+@media (max-width: 800px) {
+    .navbar {
+        display: flex;
+        width: 100%;
+    }
+
+    .navbar1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        left: 10px;
+    }
+
+    .navbar2 {
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 10px;
+    }
+
+    .d-flex1 {
+
+        display: none;
+    }
+
+    .fluidcontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbaritems {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbarimage {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        left: 15px;
+    }
+
+    .navbarbtn {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: -20px;
+    }
+
+
+    .image {
+        margin-left: 5px;
+        height: 35px;
+        width: 180px;
+    }
+
+    .btncomponent {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    .homebtn {
+        display: flex;
+        justify-content: flex-end;
+        background-color: white;
+        position: relative;
+        left: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #808080;
+        font-weight: 600;
+    }
+
+    .homebtn:hover {
+        font-weight: 600;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 7px;
+        transition: 0.5s;
+        border: none;
+    }
+
+    .profilebtn {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        position: relative;
+        left: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #808080;
+        font-weight: 600;
+    }
+
+    .profilebtn:hover {
+        font-weight: 600;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 7px;
+        transition: 0.5s;
+        border: none;
+    }
+
+    .settingsbtn {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        position: relative;
+        left: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #808080;
+        font-weight: 600;
+    }
+
+    .settingsbtn:hover {
+        font-weight: 600;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 7px;
+        transition: 0.5s;
+        border: none;
+    }
+
+    .logoutbtn {
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: white;
+        background-color: crimson;
+        font-weight: 600;
+    }
+
+    .logoutbtn:hover {
+        font-weight: 600;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: white;
+        background-color: crimson;
+        transition: 0.5s;
+        border: 2px solid crimson;
+    }
+
+
+    .span:hover {
+        text-decoration: dotted;
+    }
+
+    .span {
+        cursor: pointer;
+    }
+
+
+}

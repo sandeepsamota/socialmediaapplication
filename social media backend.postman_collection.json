@@ -1,0 +1,1065 @@
+{
+	"info": {
+		"_postman_id": "b4ec8822-0635-4e42-8858-510d1b1ac179",
+		"name": "social media backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Jatin\",\n    \"lastName\": \"Aggarwal\",\n    \"email\": \"adriano23012001@gmail.com\",\n    \"password\": \"12345678\",\n    \"username\": \"TechieJatin\",\n    \"dob\": \"2001-01-23\",\n    \"country\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/auth/signup",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/auth/verify?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlY2hpZUphdGluIiwiZW1haWwiOiJhZHJpYW5vMjMwMTIwMDFAZ21haWwuY29tIiwiaWF0IjoxNjYxOTI5NTYyLCJleHAiOjE2NjE5MzY3NjJ9.64E6sqpaqfKbzHsJ-jVD4F8kyE06AgMlWJeA1ZI1Sv4",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"verify"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlY2hpZUphdGluIiwiZW1haWwiOiJhZHJpYW5vMjMwMTIwMDFAZ21haWwuY29tIiwiaWF0IjoxNjYxOTI5NTYyLCJleHAiOjE2NjE5MzY3NjJ9.64E6sqpaqfKbzHsJ-jVD4F8kyE06AgMlWJeA1ZI1Sv4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"adriano23012001@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/auth/signin",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiY3JlYXRlZEF0IjoiMjAyMi0wOC0zMVQwNzowNjowMi4yMjFaIiwiaWF0IjoxNjYxOTMwMDQ0LCJleHAiOjE2NjIwMTY0NDR9.mzburxOc4mxD6wXjDhY4EmPBFlBMqxQ_7akNXvirzlA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"12345678\",\n    \"newPassword\": \"87654231\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/auth/reset-pass",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"reset-pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MDgwLCJleHAiOjE2NjE4NTM0ODB9.Nmyh3xIMbZMRJL4qwSPZEJi1GJKChhZNy5wgYrY8SV0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/auth/logout",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserPrivate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoiYWRyaWFubzIzMDEyMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZ3JncmVnaGhqIiwiaWF0IjoxNjYxNzU0OTMyLCJleHAiOjE2NjE4NDEzMzJ9.agBv4XvN0Gto58qgp4meismtgBS_xZItoMvbpFGR36M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/auth/user-private",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"user-private"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserPublic",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoiYWRyaWFubzIzMDEyMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZ3JncmVnaGhqIiwiaWF0IjoxNjYxNzU0OTMyLCJleHAiOjE2NjE4NDEzMzJ9.agBv4XvN0Gto58qgp4meismtgBS_xZItoMvbpFGR36M",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/auth/user-public?username=HitJatin",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"user-public"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "HitJatin"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetPass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"adriano23012001@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/auth/forgot-pass",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"forgot-pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyPass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm8yMzAxMjAwMUBnbWFpbC5jb20iLCJpYXQiOjE2NjE5MzEwODIsImV4cCI6MTY2MTkzNDY4Mn0.Yt1sqmzG0sDivywzHyg2nRkFQPj17LVhSfEoEuO2kK8\",\n    \"password\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/auth/verify-forgot",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"verify-forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiY3JlYXRlZEF0IjoiMjAyMi0wOC0zMVQwNzowNjowMi4yMjFaIiwiaWF0IjoxNjYxOTMwMDQ0LCJleHAiOjE2NjIwMTY0NDR9.mzburxOc4mxD6wXjDhY4EmPBFlBMqxQ_7akNXvirzlA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Jatin\",\n    \"lastName\": \"Aggarwal\",\n    \"username\": \"HitJatin\",\n    \"dob\": \"2001-01-23\",\n    \"country\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/auth/update",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yN1QwNzo1NjozNS4wMDBaIiwiaWF0IjoxNjYxNzY2ODI4LCJleHAiOjE2NjE4NTMyMjh9.giLGJ-d_1TMgp7PmL7vaNT-PC_yRbD-474AfG7vi72I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/auth/delete",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"auth",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "newPost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiY3JlYXRlZEF0IjoiMjAyMi0wOC0zMVQwNzowNjowMi4yMjFaIiwiaWF0IjoxNjYxOTM2MDYwLCJleHAiOjE2NjIwMjI0NjB9.g_ppnkCJDLURyy3-Nr0qlQ9vAjfn8DkSDzExYj3zKmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Test postd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/post/create",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/post/get-post?postId=3",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"post",
+								"get-post"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiY3JlYXRlZEF0IjoiMjAyMi0wOC0zMVQwNzowNjowMi4yMjFaIiwiaWF0IjoxNjYxOTM2MDYwLCJleHAiOjE2NjIwMjI0NjB9.g_ppnkCJDLURyy3-Nr0qlQ9vAjfn8DkSDzExYj3zKmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"updatePost\",\n    \"postId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/post/update",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"post",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\":5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/post/delete",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"post",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPostsUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/post/get-all-posts-user?userId=0",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"post",
+								"get-all-posts-user"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "newComment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\": 6,\n    \"comment\": \"Test Comment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/comment/create",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"comment",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getComment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/comment/get-comment?commentId=1",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"comment",
+								"get-comment"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\":\"jhbhb\",\n    \"commentId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/comment/update",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"comment",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"commentId\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/comment/delete",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"comment",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCommentsPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/comment/get-all-comments-post?postId=6",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"comment",
+								"get-all-comments-post"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "like",
+			"item": [
+				{
+					"name": "newLike",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/like/create",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"like",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLike",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"likeId\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/like/delete",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"like",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllLikesPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/like/get-all-likes-post?postId=6",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"like",
+								"get-all-likes-post"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "share",
+			"item": [
+				{
+					"name": "newShare",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/share/create",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"share",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getShare",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/share/get-share?shareId=2",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"share",
+								"get-share"
+							],
+							"query": [
+								{
+									"key": "shareId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateShare",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\":\"jhbhb\",\n    \"shareId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/share/update",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"share",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteShare",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shareId\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/share/delete",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"share",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSharesPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/share/get-all-shares-post?postId=6",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"share",
+								"get-all-shares-post"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "follow",
+			"item": [
+				{
+					"name": "addFollow",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requestedUserId\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/follow/add-follow",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"follow",
+								"add-follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "acceptFollow",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"folowId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/follow/accept-follow",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"follow",
+								"accept-follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFollow",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiY3JlYXRlZEF0IjoiMjAyMi0wOC0yOVQwOTo1NTozNy4wMDBaIiwiaWF0IjoxNjYxNzY3MjU2LCJleHAiOjE2NjE4NTM2NTZ9.CDXjItJ09XrdZCIzzciSaHfMNae3R2khXSTJq0QtcWw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"followId\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/follow/delete-follow",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"follow",
+								"delete-follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFollowers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/follow/followers?userId",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"follow",
+								"followers"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFollowing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}api/follow/following?userId",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"follow",
+								"following"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "https://rest-social-media.herokuapp.com/",
+			"disabled": true
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoiYWRyaWFubzIzMDEyMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZ3JncmVnIiwiaWF0IjoxNjYxNTA2OTI3LCJleHAiOjE2NjE1OTMzMjd9.PmRTlunYYWhNeGz16F_sEgxAqrW9GJccnn_wAdNxW-k"
+		},
+		{
+			"key": "local_url",
+			"value": "http://localhost:4000/"
+		}
+	]
+}
