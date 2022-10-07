@@ -40,17 +40,6 @@ const Post = ({ setIsOpen }) => {
       .then((res) => {
         console.log(res);
 
-        // localStorage.setItem("token", res?.data[0]?.token);
-        // localStorage.setItem("name", res?.data[0]?.name);
-
-        // res.success == true
-        //   ? toast.success("Successfully Regsister !", {
-        //       position: toast.POSITION.TOP_CENTER,
-        //     })
-        //   : toast.error("Invalid Data !", {
-        //       position: toast.POSITION.TOP_CENTER,
-        //     });
-
         if (res.success === true) {
           toast.success(res.message, {
             position: toast.POSITION.TOP_CENTER,

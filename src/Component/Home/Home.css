@@ -23,6 +23,8 @@
 .userdeatilshomepage1 {
     display: flex;
     align-items: center;
+    position: relative;
+    left: -10px;
 }
 
 .followbtn {
@@ -115,25 +117,61 @@
 }
 
 .moreicontip {
-    position: relative;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 35px;
-    height: 35px;
+    width: 30px;
 }
 
 .moreicontip:hover {
+    background-color: rgb(253, 228, 233);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: sticky; */
-    background-color: rgb(252, 240, 242);
-    border-radius: 40px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
 
+.moreicontip .moreiconbtntip {
+    visibility: hidden;
+    width: max-content;
+    position: absolute;
+    background-color: #e3e2e2;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1;
+    top: 13%;
+    left: 91%;
+    margin-left: -60px;
+}
+
+.moreicontip.moreiconbtntip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.moreicontip:hover .moreiconbtntip {
+    visibility: visible;
+}
+
+.morebtntiphr {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    /* padding-top: -15px;
+    padding-bottom: -15px; */
 }
 
 .Modalbtn {
@@ -210,11 +248,21 @@
     margin-left: 20px;
 }
 
+.hrbeforelikeshare {
+    position: relative;
+    top: 30px;
+}
+
+.hrbeforeaccountdeatails {
+    position: relative;
+    top: -15px;
+}
+
 .postmodal2 {
     display: flex;
     align-items: center;
     position: relative;
-    top: -5px;
+    top: -9px;
     margin-left: 0px;
     margin-right: 10px;
 }
@@ -250,7 +298,8 @@
 
 .postmodalmedia2 {
     display: flex;
-
+    position: relative;
+    top: 16px;
     justify-content: space-between;
     align-items: center;
 }
@@ -652,7 +701,7 @@ span {
         color: #1266f1;
         position: relative;
         right: 8px;
-        top: 4px;
+        top: 0px;
     }
 
     .homebody {
