@@ -93,7 +93,7 @@ function SignUp() {
             <input
               type="image"
               src={
-                "https://cdn-clklo.nitrocdn.com/MYSuIlnSDlfpMrNTtwCzrqpXpFLTEsHf/assets/static/optimized/rev-8f111d9/wp-content/uploads/2019/12/logo-2.png"
+                "https://eplanetsoft.com/wp-content/uploads/2019/12/logo-2.png"
               }
               alt="logo"
             />
